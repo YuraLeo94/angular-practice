@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 interface exampleTopic {
   title: string;
@@ -10,21 +10,13 @@ interface exampleTopic {
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.less']
 })
-export class HomePageComponent implements OnInit {
+export class HomePageComponent {
 
   public examples: exampleTopic[] = [
     {
       title: "ViewChild",
       root: "/view-child"
-    },
-    {
-      title: "test",
-      root: "test"
     }
   ]
-  constructor() { }
-
-  ngOnInit(): void {
-  }
 
 }
