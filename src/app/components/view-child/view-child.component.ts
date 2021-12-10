@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { CounterComponent } from '../counter/counter.component';
 import { ViewChildTeamplateVariablesComponent } from '../view-child-teamplate-variables/view-child-teamplate-variables.component';
 
@@ -7,7 +7,7 @@ import { ViewChildTeamplateVariablesComponent } from '../view-child-teamplate-va
   templateUrl: './view-child.component.html',
   styleUrls: ['./view-child.component.less']
 })
-export class ViewChildComponent implements AfterViewInit {
+export class ViewChildComponent {
 
   // Titles for examples
   public viewChildTitle = "ViewChild";
@@ -55,8 +55,4 @@ export class ViewChildComponent implements AfterViewInit {
     }
   }
 
-  ngAfterViewInit() {
-    console.log("nameComponent:", this.nameComponent);
-    console.log("domElementComponent", this.domElementComponent?.nativeElement.querySelector("p").textContent);
-  }
 }
