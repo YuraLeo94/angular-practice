@@ -1,0 +1,21 @@
+<h1>{{viewChildTitle}}</h1>
+<app-counter></app-counter>
+<button (click)="increment()">+</button>
+<button (click)="decrement()">-</button>
+
+<h1>{{viewChildTemplateVariables}}</h1>
+<p #nameText>{{name}}</p>
+<p>{{nameText.textContent}}</p>
+<button (click)="change()">Change name</button>
+<br><br>
+<input [(ngModel)]="nameText.textContent">
+
+<h1>{{injectingDomElementForComponent}}</h1>
+<app-view-child-teamplate-variables #nameTextComponent></app-view-child-teamplate-variables>
+<input [(ngModel)]="nameTextComponent.name">
+<br><br>
+<button (click)="componentChange()">Change name</button>
+
+<h1>{{viewChildDonElementLinkedComponent}}</h1>
+<app-view-child-teamplate-variables #domElementComponent></app-view-child-teamplate-variables>
+<button (click)="domElementComponentChange()">Change name</button>
