@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-interface exampleTopic {
+export interface exampleTopic {
   title: string;
   root: string
 }
@@ -16,6 +16,10 @@ export class HomePageComponent {
     {
       title: "ViewChild",
       root: "/view-child"
+    },
+    {
+      title: "Lazy-loading",
+      root: "/lazy-loading"
     }
   ]
 
