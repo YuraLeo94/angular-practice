@@ -5,6 +5,7 @@ import { ViewChildComponent } from './components/view-child/view-child.component
 
 const routes: Routes = [
   { path: 'view-child', component: ViewChildComponent },
+  { path: 'lazy-loading', loadChildren: () => import('./lazy-loading/lazy-loading.module').then(m => m.LazyLoadingModule) },
   { path: '**', component: HomePageComponent }
 
 ];

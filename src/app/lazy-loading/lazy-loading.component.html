@@ -1,0 +1,6 @@
+<ul>
+    <li *ngFor="let menuItem of menu" [routerLink]="menuItem.root">
+        <span>{{menuItem.title}}</span>
+    </li>
+</ul>
+<router-outlet></router-outlet>
